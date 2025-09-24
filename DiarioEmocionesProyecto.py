@@ -171,10 +171,6 @@ class DiarioEmocionesApp:
         self.nombre_emocion_entry = tk.Entry(form_frame, width=30)
         self.nombre_emocion_entry.grid(row=1, column=1, sticky="w", pady=5)
 
-        tk.Label(form_frame, text="Emoji:", bg="#f8f0e3", font=("Arial", 12)).grid(row=2, column=0, sticky="w", pady=5)
-        self.emoji_entry = tk.Entry(form_frame, width=30)
-        self.emoji_entry.grid(row=2, column=1, sticky="w", pady=5)
-
         btn_frame = tk.Frame(self.tab_emociones, bg="#faf3e0")
         btn_frame.pack(pady=20)
 
@@ -190,7 +186,6 @@ class DiarioEmocionesApp:
     # FUNCIONES MODULO 2 :
     def guardar_emocion(self):
         nombre = self.nombre_emocion_entry.get()
-        emoji = self.emoji_entry.get()
 
         if not nombre:
             messagebox.showwarning("Advertencia", "El nombre de la emocion es obligatorio")
@@ -218,7 +213,6 @@ class DiarioEmocionesApp:
     def limpiar_emocion(self):
         self.emocion_id_entry.delete(0, tk.END)
         self.nombre_emocion_entry.delete(0, tk.END)
-        self.emoji_entry.delete(0, tk.END)
 
     # ----------------------------------------
     # MÓDULO 3: ENTRADAS
@@ -344,3 +338,4 @@ if __name__ == "__main__":
     app = DiarioEmocionesApp(root)
 
     root.mainloop()
+
