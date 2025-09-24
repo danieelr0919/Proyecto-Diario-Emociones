@@ -295,7 +295,7 @@ class DiarioEmocionesApp:
     def limpiar_entrada(self):
         self.entrada_id_entry.delete(0, tk.END)
         self.entrada_usuario_id_entry.delete(0, tk.END)
-        self.fecha_entry.set_date("")
+        self.fecha_entry.delete(0, tk.END)
         self.texto_entry.delete("1.0", tk.END)
         self.emociones_ids_entry.delete(0, tk.END)
 
@@ -342,4 +342,5 @@ class DiarioEmocionesApp:
 if __name__ == "__main__":
     root = tk.Tk()
     app = DiarioEmocionesApp(root)
+
     root.mainloop()
