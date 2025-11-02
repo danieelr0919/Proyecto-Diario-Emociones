@@ -31,7 +31,7 @@ class DiarioEmocionesApp:
                 host='localhost',
                 database='diario_emociones',
                 user='root',
-                password=''  # Cambia si usas contraseña
+                password=''  
             )
             if conexion.is_connected():
                 print("✅ Conexión a base de datos exitosa")
@@ -338,4 +338,5 @@ if __name__ == "__main__":
     app = DiarioEmocionesApp(root)
 
     root.mainloop()
+
 
